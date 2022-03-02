@@ -1,0 +1,78 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-20 23:49:35
+ * @LastEditTime: 2022-01-21 20:15:28
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\03数组类型.html
+-->
+<script>
+  var array = [100, 200, 300];
+  console.log(array.length);
+  console.log(array);
+
+  array.length = 2;
+  console.log(array.length);
+  console.log(array);
+  array[0] = 900;
+  console.log(array);
+
+  array.forEach((element) => {
+    console.log(element);
+  });
+
+  // 追加远元素
+  array.push(800);
+  console.log();
+  // 删除最后一个元素
+  array.pop();
+  // 在最开始位置插入数据
+  array.unshift(-1);
+  // 删除第一个元素
+  array.shift();
+  // 反转数组
+  array.reverse();
+  // 删除数组中若干元素，并选择是否插入新的元素
+  // array.slice(开始位置, 元素个数, 要插入的元素);
+  array.slice(1, 1, "新来的");
+  //
+  array.sort(function (a, b) {
+    return a - b;
+  });
+  // 将数据用连接符连接成一个字符串
+  var res = array.join(",");
+  console.log(array);
+  // 拼接数组
+  res = array.concat([4, 5, 6]);
+  console.log(res);
+  //截取
+  res = array.slice(1);
+  console.log(res);
+
+  // 位置
+  var index = array.indexOf(900);
+  console.log(index);
+
+  // 便利數組
+  array.forEach(function (item, index, array) {
+    console.log(item);
+  });
+  // 映射
+  res = array.map(function (item, index, array) {
+    return item * 10;
+  });
+  console.log(res);
+  // filter
+  res = array.filter(function (item, index, array) {
+    return item > 800;
+  });
+  console.log(res);
+  // 判断是否全部满足条件
+  var res = array.every(function (item, index, array) {
+    return item > 800;
+  });
+  // 判断是否有全部满足条件
+  var res = array.some(function (item, index, array) {
+    return item > 800;
+  });
+</script>

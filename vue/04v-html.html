@@ -1,0 +1,33 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-28 21:37:28
+ * @LastEditTime: 2022-02-18 22:40:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\vue\v-html.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="box">
+        {{mytext}}
+        <!-- 渲染一个html标签 -->
+      <div v-html="mytext"></div>
+    </div>
+    <script>
+      new Vue({
+          el:"#box",
+          data:{
+              mytext:"<b>加班的</b>"
+          }
+      })
+    </script>
+  </body>
+</html>

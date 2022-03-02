@@ -1,0 +1,83 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-22 21:24:13
+ * @LastEditTime: 2022-01-23 12:57:26
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\html+css\css\css浮动属性.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*浮动的作用： 1.就是让让竖的东西横着来 2.文本环绕图片显示 浮动是见缝插针*/
+        /* div{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+            float: left;
+        }
+        .green{
+            background-color: green;
+            float: left;
+            width: 300px;
+            height: 300px;
+        }
+        .blue{
+            background-color: blue;
+            float: left;
+        } */
+
+        /* 高度塌陷 清浮动*/
+        .box1,.box2{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        .box1{
+            background-color: yellow;
+        }
+
+        .box2{
+            background-color: yellowgreen;
+        }
+
+        .box3{
+            width: 300px;
+            height: 300px;
+            background-color:violet;
+            /* clear: left; */
+        }
+        /*解决办法，
+        1、固定其他div高度 
+        2、清除浮动clear: left,right,both 
+        3. 后面补一个div 不设置宽高，clear:both
+        4. overflow: hidden;
+        */
+        .container{
+            /* height: 200px; */
+            overflow: hidden; 
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- <div class="red"></div>
+    <div class="green"></div>
+    <div class="blue"></div> -->
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+    <div class="box3"></div>
+</body>
+</html>

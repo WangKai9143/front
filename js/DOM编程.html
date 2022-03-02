@@ -1,0 +1,97 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-21 21:53:55
+ * @LastEditTime: 2022-01-23 23:44:44
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\DOM编程.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>div</div>
+    <div class="box">box</div>
+    <div id="abc">abc</div>
+    <button id="bt">切换html</button>
+    <div
+      id="line"
+      style="width: 100px; height: 100px; background-color: pink"
+    ></div>
+  </body>
+
+  <script>
+    //1. 根据选择器获取元素
+    var ele = document.getElementById("abc");
+    console.log(ele);
+    // 根据选择器获取元素
+    ele = document.getElementsByClassName("box");
+    console.log(ele);
+    // 根据选择器获取元素
+    ele = document.getElementsByTagName("div");
+    console.log(ele);
+    // 根据选择器获取元素,获取的是第一个
+    ele = document.querySelector("div");
+    console.log(ele);
+    // 根据选择器获取元素,获取的是所有
+    ele = document.querySelectorAll("div");
+    console.log(ele);
+
+    // 2.操作元素内容
+    // 操作元素文本内容
+    var ele = document.getElementById("abc");
+    console.log(ele.innerText);
+    ele.innerText = "jjjj";
+    console.log(ele.innerText);
+    // 操作元素的超文本内容
+    console.log(ele.innerHTML);
+
+    bt.onclick = function () {
+      ele.innerHTML = "<span>新内容</span>";
+    };
+
+    // 3.操作元素属性
+    // 原生属性
+    bt.onclick = function () {
+      ele.id = "llll";
+    };
+    // 自定义属性
+    // 元素.getAttribute('属性名')  元素.setAttribute('属性名'，'属性值') 元素.removeAttribute('属性名')
+    // 注意操作元素属性 一般不用操作元素类名和样式
+
+    // 操作元素类名 元素.className='新类名'
+    ele = document.getElementsByClassName("box");
+    ele.className = "newClassName";
+
+    // 操作元素行内样式 元素.style.样式名称
+    ele = document.getElementById("line");
+    ele.style.backgroundColor = "skyblue";
+
+    // 获取元素非行内样式,js不是设置field行内样式的属性
+    console.log(window.getComputedStyle(ele).width);
+
+    //4.增删该元素
+    var span = document.createElement("span");
+    span.innerText = "我是创建出来的span标签";
+
+    var div = document.querySelector("div");
+    div.appendChild(span);
+
+    document.removeChild();
+    document.replaceChild();
+    span.cloneNode();
+
+    //获取元素尺寸 包括内边距和边框的长度
+    // 元素.offsetHeight
+    // 元素.offsetWidth
+
+    //获取元素尺寸 包括内边距长度
+    // 元素.clientHeight
+    // 元素.clientWidth
+  </script>
+</html>

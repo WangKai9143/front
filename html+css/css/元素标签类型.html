@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-23 18:29:09
+ * @LastEditTime: 2022-01-23 19:12:33
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\html+css\css\元素显示类型.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+
+        /* 块元素
+        display: block;
+        display list-item;
+        */
+
+        b{
+            /* display: inline; */
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+    </style>
+</head>
+<>
+    <!-- 元素类型分类：
+    1.块元素：默认占据一行，可以定义宽高 一般作为其他元素的容器 div,p,ul,li,dl,dt,dd,h1-h6
+    2.行内元素:横着排 不能定义宽高 内联元素遵循盒子模型基本规则 对于margin和padding个别元素不生效 a b em i span strong
+    3.行内块元素 img input 结合了行和块状元素的特点（可以横着排，又能定义宽高）
+    -->
+
+    <!-- 行标签 -->
+    <div></div>
+    <ul>
+        <li>111111111</li>
+        <li>222222222</li>
+        <li>333333333</li>
+    </ul>
+
+    <p>djjsdjdsj</p>
+
+    <!-- 行内标签 -->
+    <b>111111</b>
+    <strong>222222</strong>
+    <a href="www.baidu.com">www.baidu.com</a>
+
+    <!-- 行内块状标签 -->
+    <img src="../img/IMG_20200201_115731.jpg" alt="" >
+    <input type="text">
+</html>

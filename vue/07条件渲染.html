@@ -1,0 +1,76 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-02-19 22:20:25
+ * @LastEditTime: 2022-02-19 23:07:47
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\vue\07条件渲染.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div v-if="isCreated">12345</div>
+        <div>
+            <h2>所有订单</h2>
+            <ul>
+                <li v-for="item in datalist">
+                    {{item.title}}---{{item.state}}
+<!-- 
+                    <span v-if="itme.state===0">未付款</span>
+                    <span v-else-if="itme.state===1">待发货</span>
+                    <span v-else-if="itme.state===2">已发货</span>
+                    <span v-else>已完成</span> -->
+                </li>
+            </ul>
+        </div>
+        <div>
+            <!-- 会破坏dom结构 导致某些选择器失效 -->
+            <div v-if="isCreated">
+                <div>11111</div>
+                <div>22222</div>
+                <div>33333</div>
+            </div>
+            <!-- template就是一个包装元素不会真正创建在页面上 -->
+            <template v-if="isCreated">
+                <div>11111</div>
+                <div>22222</div>
+                <div>33333</div>
+            </template>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#box",
+            data:{
+                isCreated:false,
+                datalist:[
+                    {
+                        title:'11111',
+                        state:'0'
+                    },
+                    {
+                        title:'22222',
+                        state:'1'
+                    },
+                    {
+                        title:'33333',
+                        state:'2'
+                    },
+                    {
+                        title:'44444',
+                        state:'3'
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

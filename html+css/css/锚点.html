@@ -1,0 +1,84 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-23 22:11:17
+ * @LastEditTime: 2022-01-23 22:33:08
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\html+css\css\锚点.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            position: fixed;
+            right: 0px;
+            top: 100px;
+            list-style: none;
+        }
+        
+        li{
+            width: 100px;
+            height: 50px;
+            border: olivedrab solid 1px;
+            background: orange;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        div{
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+
+        #a{
+            background: chartreuse;
+
+        }
+        
+        #b{
+            background: pink;
+
+        }
+        
+        #c{
+            background: red;
+
+        }
+        
+        #d{
+            background: yellow;
+
+        }
+        /* 锚点作用：跳转于不同区域的页面中 使用a链接 
+            <a href="#锚点名字"></a>
+            <div id="锚点名字"></div>
+        */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <a href="#a">秒杀</a>
+        </li>
+        <li>
+            <a href="#b">频道广场</a>
+        </li>
+        <li>
+            <a href="#c">双11</a>
+        </li>
+        <li>
+            <a href="#d">特色关注</a>
+        </li>
+    </ul>
+
+    <div id="a">秒杀</div>
+    <div id="b">频道广场</div>
+    <div id="c">双11</div>
+    <div id="d">特色关注</div>
+</body>
+</html>

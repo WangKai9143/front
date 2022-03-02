@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-25 22:42:55
+ * @LastEditTime: 2022-01-26 20:51:45
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\vue\hello.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="box1">
+        <!-- 模板 -->
+        {{10+40}}
+        {{ myname }} 
+    </div>
+
+    <script>
+        /* 將id为box1的div 交给vue管理 */
+        var vm = new Vue({
+            el:"#box1",
+            data:{
+                myname:"wangkai"
+            }
+        })
+
+        // vue拦截原理
+        var obj = {
+
+        }
+        var obox = document.getElementById("box1");
+        // 通过Object.defineProperty方法 拦截监控对象属性的变化，进而通知watcher刷新dom.vue简化了省略了正常的dom刷新操作
+        Object.defineProperty(obj,"myname",{
+            get(){
+                console.log("get");
+            },
+            set(val){
+                console.log("set:"+val);
+                obox.innerHTML='<h2>'+val+'<h2>'
+            }
+        });
+    </script>
+</body>
+</html>

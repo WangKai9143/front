@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-20 23:16:56
+ * @LastEditTime: 2022-01-20 23:37:04
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\test3.html
+-->
+<script>
+    var a = 100;
+    var b = "100";
+    if(a==b){
+        console.log("a==b");
+    }
+    if(a===b){
+        console.log("a===b");
+    }
+
+    switch(a){
+        case 100:
+            console.log(100);
+            break;
+        case 200:
+            console.log(200);
+            break;
+        default:
+            console.log(300);
+    }
+
+    var n = 0;
+    while(n<3){
+        n++;
+        console.log(n);
+    }
+
+    for (let i = 0; i < 100; i++) {
+        if(i%100==0){
+            console.log(i);
+        }        
+    }
+
+    function hahah(params) {
+        console.log("haha");
+        return "haha";
+    }
+
+    var r1 = hahah();
+    console.log(r1);
+
+    function recursion(n) {
+        if(n==1){
+            return 1;
+        }
+        return n*recursion(n-1);
+    }
+    
+    console.log(recursion(100));
+</script>

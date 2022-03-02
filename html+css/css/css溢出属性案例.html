@@ -1,0 +1,157 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-23 13:38:44
+ * @LastEditTime: 2022-01-23 18:08:30
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\html+css\css\css溢出属性案例.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*清除默认边距*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 890px;
+            height: 290px;
+            background: yellow;
+            margin: 0 auto;
+            overflow: auto;
+        }
+        .info{
+            width: 200px;
+            height: 100px;
+            border: red solid 1px;
+            color: chartreuse;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .info div{
+            width: 200px;
+            height: 80px;
+            background: #ccc;
+            font-size: 12px;
+        }
+        .info .price{
+            height: 63px;
+            line-height: 63px;
+            padding-left: 20px;
+            color: red;
+        }
+        .info .date{
+            height: 21px;
+            line-height: 21px;
+            padding-left: 20px;
+            color: blue;
+        }
+
+        .category{
+            background: white;
+            text-align: center;
+        }
+        /* 伪选择器 */
+        .info:hover div{
+            background-color: lightslategray;
+            color: magenta;
+        }
+
+        .info:hover .price{
+            color: magenta;
+        }
+
+        .info:hover .date{
+            color: magenta;
+        }
+
+        .info:hover .category{
+            color: magenta;
+            /* background-image: url(../img/IMG_20200201_115731.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed; */
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+        <div class="info">
+            <div>
+                <p class="price">$100.00元</p>
+                <p class="date">有效期至:2021-5-1</p>
+            </div>
+            <p class="category">[店铺类][商场类]</p>
+        </div>
+    </div>
+</body>
+</html>

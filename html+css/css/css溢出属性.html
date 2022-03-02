@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-01-23 13:25:55
+ * @LastEditTime: 2022-01-23 18:25:50
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \code\html+css\css\css溢出属性.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+
+        /* 溢出显示滚动条 */
+        /* overflow: visible; 显示溢出 */
+        /*overflow: hidden; 隐藏溢出*/
+        /* overflow: scroll; 滚动条显示*/
+        overflow: auto; /*有需要显示滚动条*/
+        /*overflow: inherit; 继承父元素的滚动条*/
+      }
+
+      
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* white-space: pre-line*/
+        /*
+            nowrap:不换行
+            pre:显示空格，回车，不换行；
+            pre-wrap:显示空格回车 换行
+            pre-line:显示回车 不显示空格 
+        
+        */
+        /* 溢出显示省略号 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      css属性有：字体属性（font）、背景属性（background）、区块属性（block）、方框属性（box）、边框属性（border）、列表属性（list-style）、定位属性（position）等。绝地反击浮动
+      对方回复电话答复 dfjdfjdf 多多少少多的 奋斗的辅导辅导
+    </div>
+    <hr style="border-width: 10px;">
+    <div class="box2">
+        css属性有：字体属性（font）、背景属性（background）、区块属性（block）、方框属性（box）、边框属性（border）、列表属性（list-style）、定位属性（position）等。绝地反击浮动
+        对方回复电话答复 dfjdfjdf 多多少少多的 奋斗的辅导辅导
+      </div>
+  </body>
+</html>
